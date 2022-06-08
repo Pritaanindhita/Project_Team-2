@@ -1,12 +1,7 @@
-<style>
-    .search_nama {
-        min-width: 100%;
-    }
+@extends('layout/main')
 
-    .simpan_btn {
-        background-color: #2e3092;
-    }
-</style>
+@section('konten')
+
 <div class="inspeksi container-fluid mt-3 ml-3">
     <div class="judul_inspeksi">
         <h2 class="mb-2">Inspeksi Alat Pelindung Diri (APD)</h2>
@@ -14,7 +9,7 @@
     <p>PT Barata Indonesia (Persero)</p>
     <div class="card-body mt-5 shadow">
         <p>Cari nama pekerja dan mulailah inspeksi</p>
-        <form id="inspeksi_nama">
+        <form id="inspeksi_nama" method="get">
             <div class="row mt-3">
                 <div class="col-md-12">
                     <div class="form-group">
@@ -33,9 +28,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="" class=" float-right">
-                                    <button class="btn text-light simpan_btn mt-3" type="button">Mulai Inspeksi</button>
-                                </a>
+                                <a href="/form" class="btn text-light simpan_btn mt-3 float-right" type="submit" style="background-color: #2e3092;">Mulai Inspeksi</a>
                             </div>
 
                         </div>
@@ -45,3 +38,4 @@
         </form>
     </div>
 </div>
+@endsection

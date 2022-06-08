@@ -1,8 +1,6 @@
-<style>
-    .form-select {
-        min-width: 100%;
-    }
-</style>
+@extends('layout/main')
+@section('konten')
+
 <div class="apd-pengelasan">
     <!-- SARUNG TANGAN LAS-->
     <div class="card-body mt-3 shadow rounded">
@@ -240,3 +238,5 @@
         </div>
     </div>
 </div>
+
+@endsection

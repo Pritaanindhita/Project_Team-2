@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormInspeksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('petugas');
+    return view('inspeksi');
+});
+Route::get('/inspeksi', function () {
+    return view('inspeksi');
+});
+Route::get('/tabel-inspeksi', function () {
+    return view('table-inspeksi');
+});
+Route::get('/form', [FormInspeksiController::class, 'formulir']);
+Route::post('/form', [FormInspeksiController::class, 'store']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/laporan', function () {
+    return view('laporan');
+});
+Route::get('/detail-laporan', function () {
+    return view('detail_laporan');
 });

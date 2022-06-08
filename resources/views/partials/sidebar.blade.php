@@ -1,15 +1,3 @@
-<style>
-    .sidebar-nav .gambar {
-        margin-top: 30%;
-        position: relative;
-        bottom: 0;
-    }
-
-    .sidebar-nav .gambar img {
-        width: 80%;
-    }
-</style>
-<!-- Sidebar -->
 <div id="sidebar-wrapper">
     <div class="sidebar-nav">
         <div class="sidebar-brand mb-5">
@@ -49,4 +37,3 @@
         </div>
     </div>
 </div>
-<!-- /#sidebar-wrapper -->

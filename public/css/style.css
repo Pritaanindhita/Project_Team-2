@@ -179,8 +179,20 @@ body{
     background: none;
 }
 
-/*INSPEKSI*/
+.sidebar-nav .gambar {
+    margin-top: 30%;
+    position: relative;
+    bottom: 0;
+}
 
+.sidebar-nav .gambar img {
+    width: 80%;
+}
+
+/*INSPEKSI*/
+.search_nama {
+    min-width: 100%;
+}
 
 @media(min-width:768px) {
     #wrapper {

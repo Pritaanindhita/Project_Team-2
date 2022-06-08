@@ -3,7 +3,7 @@
         min-width: 100%;
     }
 </style>
-<div class="apd-pengelasan">
+<div class="apd-pengecatan">
     <!-- SARUNG TANGAN CAT-->
     <div class="card-body mt-3 shadow rounded">
         <h4>Sarung Tangan Pengecatan</h4>

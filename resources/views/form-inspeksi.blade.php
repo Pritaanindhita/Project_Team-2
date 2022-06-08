@@ -1,3 +1,7 @@
+@extends('layout/main')
+
+@section('konten')
+
 <style>
     .simpan_btn {
         background: #2e3092;
@@ -16,12 +20,13 @@
         min-width: 100%;
     }
 </style>
+
 <div class="inspeksi container-fluid mt-3 ml-3 mb-5">
     <div class="judul_inspeksi">
         <h4 class="mb-2">Form Inspeksi APD</h4>
     </div>
     <p>Enter the required information below</p>
-    <form>
+    <form method="post" action="">
         <div class="data-pekerja">
             <div class="card-body mt-3 shadow rounded">
                 <div class="row">
@@ -296,8 +301,244 @@
             </div>
         </div>
 
+        <div class="apd-pengelasan">
+            <!-- SARUNG TANGAN LAS-->
+            <div class="card-body mt-3 shadow rounded">
+                <h4>Sarung Tangan Las</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
 
-        @include('apd_pengelasan')
+                            <!--Ada/Tidak -->
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Ada/Tidak</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="las-ada-tidak">
+                                        <option value="">Ada</option>
+                                        <option value="">Tidak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--KONDISI -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Kondisi</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="kondisi">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KAP LAS-->
+            <div class="card-body mt-3 shadow rounded">
+                <h4>Kap Las</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!--Ada/Tidak -->
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Ada/Tidak</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="kap-ada-tidak">
+                                        <option value="">Ada</option>
+                                        <option value="">Tidak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Shell Kap -->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Shell</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="shell-kap">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <!--Suspension-->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Suspension</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="suspension-kap">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Kaca Kap -->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Kaca</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="kaca-kap">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APRON-->
+            <div class="card-body mt-3 shadow rounded">
+                <h4>Apron</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!--Ada/Tidak -->
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Ada/Tidak</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="apron-ada-tidak">
+                                        <option value="">Ada</option>
+                                        <option value="">Tidak</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--Apron Dada -->
+                            <div class="form-group">
+                                <div class="row mt-2">
+                                    <div class="col-sm-4">
+                                        <label>Apron Dada</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <select class="form-select form-select-lg" aria-label="apron-dada">
+                                            <option value="">Layak</option>
+                                            <option value="">Tidak Layak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Apron Lengan -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Apron Lengan</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="apron-lengan">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MASKER RESPIRATOR -->
+            <div class="card-body mt-3 shadow rounded">
+                <h4>Masker Respirator</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!--Ada/Tidak -->
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Ada/Tidak</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="respirator-ada-tidak">
+                                        <option value="">Ada</option>
+                                        <option value="">Tidak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Headband -->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Headband</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="headband">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <!--Cartridge-->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Cartridge</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="cartridge">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--MASK -->
+                        <div class="form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>Mask</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-select form-select-lg" aria-label="mask">
+                                        <option value="">Layak</option>
+                                        <option value="">Tidak Layak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="tambahan_keterangan">
             <!-- Keterangan dan Dokumentasi-->
             <div class="card-body mt-3 shadow rounded">
@@ -322,7 +563,7 @@
                                         <label>Dokumentasi</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="file">
+                                        <input type="file" name="dokumentasi">
                                     </div>
                                 </div>
                             </div>
@@ -332,11 +573,8 @@
             </div>
         </div>
 
-        <a href="" class=" float-right">
-            <button class="btn text-light simpan_btn mt-3" type="button">Simpan</button>
-        </a>
-        <a href="" class=" float-right">
-            <button class="btn mr-2 reset_btn mt-3" type="button">Reset</button>
-        </a>
+        <a href="/form" class="btn text-light simpan_btn mt-3 float-right" type="submit">Simpan</a>
+        <a href="" class="btn mr-2 reset_btn mt-3 float-right" type="reset">Reset</a>
     </form>
 </div>
+@endsection
